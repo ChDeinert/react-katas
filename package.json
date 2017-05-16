@@ -1,6 +1,6 @@
 {
   "name": "react-katas",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Different React components I created to improve myself",
   "main": "./lib",
   "author": "ChDeinert <ChDeinert@gmail.com>",
