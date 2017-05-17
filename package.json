@@ -2,7 +2,6 @@
   "name": "react-katas",
   "version": "0.2.0",
   "description": "Different React components I created to improve myself",
-  "main": "./lib",
   "author": "ChDeinert <ChDeinert@gmail.com>",
   "license": "MIT",
   "repository": {
