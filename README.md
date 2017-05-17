@@ -1,6 +1,7 @@
 # React-Katas
 
-A collection of React components I created to *improve* myself
+A collection of React components I created to *improve* myself.  
+You can see them [here](https://chdeinert.github.io/react-katas/)
 
 ## Development
 
@@ -17,3 +18,6 @@ If you want the tests run automatically on codechange start tests with `npm test
 ### Linting
 
 This project uses [prettier](https://github.com/prettier/prettier) so to check that your code is neatly formatted simply run `npm run prettify` or `yarn prettify`. Your code will be formatted if needed.
+
+### Publish Github Pages
+Run `npm run gh-pages` or `yarn gh-pages`. The updated Github pages will automatically be published.
