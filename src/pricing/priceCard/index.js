@@ -38,7 +38,9 @@ const PriceCard = ({
         </ul>
       : null}
 
-    <button className="price-card__action" onClick={action}>Get this!</button>
+    <div className="price-card__action-wrapper">
+      <button className="price-card__action" onClick={action}>Get this!</button>
+    </div>
   </div>
 );
 

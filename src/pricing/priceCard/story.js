@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
 import PriceCard from './';
-import './style.sass';
+import '../style.sass';
 
 storiesOf('PriceCard', module)
   .add('Standard', () => (
