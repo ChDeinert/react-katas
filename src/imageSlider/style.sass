@@ -1,0 +1,56 @@
+@import "../../vendor/css/bourbon/bourbon"
+@import "../../vendor/css/base/base"
+
+$bg-color: #263238
+$image-bg-color: #78909C
+
+body
+  background-color: $bg-color
+
+.image-slider
+  +margin(40px auto)
+  width: 100%
+  max-width: 600px
+  &__wrapper
+    position: relative
+    width: 100%
+    height: 360px
+    background-color: $image-bg-color
+    border: 6px solid lighten($bg-color, 15%)
+    border-radius: 3px
+    overflow: hidden
+  &__item
+    display: none
+    &--current
+      display: block
+    &-enter
+      opacity: 0.01
+      &-active
+        opacity: 1
+        transition: opacity 500ms ease-in
+    &-leave
+      opacity: 1
+      &-active
+        opacity: 0.01
+        transition: opacity 500ms ease-in
+  &__image
+    position: absolute
+    max-width: 100%
+    height: auto
+    top: 0
+    left: 0
+  &__indicators
+    +margin(15px 0 0 0)
+    text-align: center
+  &__indicator
+    +margin(0 3px)
+    cursor: pointer
+    display: inline-block
+    background-color: lighten($bg-color, 15%)
+    height: 12px
+    width: 12px
+    border-radius: 6px
+    &--active
+      background-color: $image-bg-color
+    &--current
+      display: block
