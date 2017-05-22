@@ -5,6 +5,9 @@ import ImageSlider from './';
 
 it('renders without images', () => {
   const wrapper = shallow(<ImageSlider images={[]} />);
+  expect(wrapper.find('SliderControls').length).toBe(1);
+  expect(wrapper.find('SliderControls').props().previous).toBeDefined();
+  expect(wrapper.find('SliderControls').props().next).toBeDefined();
   expect(wrapper.find('SliderItemList').length).toBe(1);
   expect(wrapper.find('SliderItemList').props().itemlist.length).toBe(0);
   expect(wrapper.find('SliderIndicators').length).toBe(1);

@@ -17,4 +17,13 @@ storiesOf('ImageSlider', module)
         { src: 'https://source.unsplash.com/category/nature/600x370' },
       ]}
     />
+  ))
+  .add('three items', () => (
+    <ImageSlider
+      images={[
+        { src: 'https://source.unsplash.com/category/technology/600x370' },
+        { src: 'https://source.unsplash.com/category/nature/600x370' },
+        { src: 'https://source.unsplash.com/category/buildings/600x370' },
+      ]}
+    />
   ));

@@ -1,6 +1,6 @@
 {
   "name": "react-katas",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Different React components I created to improve myself",
   "author": "ChDeinert <ChDeinert@gmail.com>",
   "license": "MIT",
@@ -9,7 +9,7 @@
     "url": "git@github.com:ChDeinert/react-katas.git"
   },
   "scripts": {
-    "start": "start-storybook -p 8080",
+    "start": "start-storybook -p 8081",
     "test": "jest",
     "testwatch": "jest --watch",
     "prettify": "prettier --single-quote --tab-width 2 --trailing-comma es5 --write \"src/**/*.js\" ",

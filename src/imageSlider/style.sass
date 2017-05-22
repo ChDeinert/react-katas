@@ -54,3 +54,30 @@ body
       background-color: $image-bg-color
     &--current
       display: block
+  &__control-wrapper
+    position: absolute
+    width: 100%
+    max-width: 600px
+    height: 360px
+  &__control-button
+    +padding(30px 9px)
+    z-index: 1
+    position: absolute
+    top: 136px
+    cursor: pointer
+    background-color: transparentize(lighten($bg-color, 15%), .3)
+    line-height: 1
+    &--caret
+      stroke: transparentize($bg-color, .3)
+      stroke-width: 3px
+      stroke-linecap: round
+      stroke-linejoin: round
+      fill: none
+    &--left
+      left: 6px
+      border-top-right-radius: 6px
+      border-bottom-right-radius: 6px
+    &--right
+      right: 6px
+      border-top-left-radius: 6px
+      border-bottom-left-radius: 6px

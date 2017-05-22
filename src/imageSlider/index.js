@@ -5,6 +5,7 @@ import shortid from 'shortid';
 
 import SliderItemList from './sliderItemList';
 import SliderIndicators from './sliderIndicators';
+import SliderControls from './sliderControls';
 
 class ImageSlider extends Component {
   constructor(props) {
@@ -13,6 +14,8 @@ class ImageSlider extends Component {
       currentImage: 0,
     };
     this.changeCurrentImage = this.changeCurrentImage.bind(this);
+    this.previousImage = this.previousImage.bind(this);
+    this.nextImage = this.nextImage.bind(this);
   }
 
   render() {
@@ -20,6 +23,7 @@ class ImageSlider extends Component {
 
     return (
       <section className="image-slider">
+        <SliderControls previous={this.previousImage} next={this.nextImage} />
         <SliderItemList
           itemlist={images}
           currentItemIndex={this.state.currentImage}
@@ -39,6 +43,28 @@ class ImageSlider extends Component {
         currentImage: index,
       });
     };
+  }
+
+  previousImage() {
+    let previousIndex = this.state.currentImage - 1;
+    console.log('prev', previousIndex);
+    if (previousIndex < 0) {
+      previousIndex = this.props.images.length - 1;
+    }
+    this.setState({
+      currentImage: previousIndex,
+    });
+  }
+
+  nextImage() {
+    let nextIndex = this.state.currentImage + 1;
+    console.log('next', nextIndex);
+    if (nextIndex === this.props.images.length) {
+      nextIndex = 0;
+    }
+    this.setState({
+      currentImage: nextIndex,
+    });
   }
 }
 
