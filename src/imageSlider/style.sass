@@ -4,13 +4,15 @@
 $bg-color: #263238
 $image-bg-color: #78909C
 
-body
-  background-color: $bg-color
 
 .image-slider
   +margin(40px auto)
   width: 100%
   max-width: 600px
+  &__body
+    background-color: $bg-color
+    width: 100%
+    height: 100%
   &__wrapper
     position: relative
     width: 100%
