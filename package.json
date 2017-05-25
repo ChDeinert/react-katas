@@ -9,7 +9,7 @@
     "url": "git@github.com:ChDeinert/react-katas.git"
   },
   "scripts": {
-    "start": "start-storybook -p 8081",
+    "start": "start-storybook -p 8080",
     "test": "jest",
     "testwatch": "jest --watch",
     "prettify": "prettier --single-quote --tab-width 2 --trailing-comma es5 --write \"src/**/*.js\" ",
