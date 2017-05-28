@@ -1,37 +1,45 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CommentForm = () => (
-  <div className="comments__form-wrapper">
+const CommentForm = props => (
+  <form className="comments__form-wrapper" onSubmit={props.submit}>
     <div className="comments__form-row">
       <label className="comments__form-label">
         Name
-        <input type="text" className="comments__form-input" />
+        <input type="text" name="name" className="comments__form-input" />
       </label>
     </div>
     <div className="comments__form-row">
       <label className="comments__form-label">
         Mail
-        <input type="text" className="comments__form-input" />
+        <input type="text" name="mail" className="comments__form-input" />
       </label>
     </div>
     <div className="comments__form-row">
       <label className="comments__form-label">
         Content
-        <textarea className="comments__form-textarea" />
+        <textarea name="content" className="comments__form-textarea" />
       </label>
     </div>
     <div className="comments__form-row">
-      <button className="comments__form-button comments__form-button--submit">
-        Submit
-      </button>
-      <button className="comments__form-button comments__form-button--cancel">
+      <input
+        type="submit"
+        className="comments__form-button comments__form-button--submit"
+        value="Submit"
+      />
+      <button
+        className="comments__form-button comments__form-button--cancel"
+        onClick={props.cancel}
+      >
         Cancel
       </button>
     </div>
-  </div>
+  </form>
 );
 
-CommentForm.propTypes = {};
+CommentForm.propTypes = {
+  submit: PropTypes.func.isRequired,
+  cancel: PropTypes.func.isRequired,
+};
 
 export default CommentForm;
