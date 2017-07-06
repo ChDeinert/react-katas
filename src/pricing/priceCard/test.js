@@ -74,6 +74,8 @@ describe('PriceCard', () => {
     );
     expect(wrapper.find('.price-card__features').length).toBe(1);
     expect(wrapper.find('.price-card__features').children().length).toBe(4);
-    expect(wrapper.find('.price-card__features').text()).toBe('barbar2bar3bar4');
+    expect(wrapper.find('.price-card__features').text()).toBe(
+      'barbar2bar3bar4'
+    );
   });
 });
